@@ -1,14 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pac-Man</title>
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pac-Man (HTML + CSS + JS)</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Pac-Man</h1>
-  <canvas id="game" width="560" height="620"></canvas>
-  <script src="js/script.js"></script>
+  <div class="wrap">
+    <canvas id="game" width="560" height="560" aria-label="Pac-Man canvas"></canvas>
+    <aside class="panel">
+      <h1>Pac-Man</h1>
+      <div class="stats">
+        <span>Puntuación</span><strong id="score">0</strong>
+        <span>Vidas</span><strong id="lives">3</strong>
+        <span>Nivel</span><strong id="level">1</strong>
+        <span>Estado</span><span id="status" class="pill">Listo</span>
+      </div>
+      <button class="btn" id="restart">Reiniciar</button>
+      <p class="small">
+        Mueve con:
+      </p>
+      <div class="keys">
+        <kbd>⬅︎</kbd><kbd>⬆︎</kbd><kbd>⬇︎</kbd><kbd>➡︎</kbd>
+      </div>
+      <p class="small" style="margin-top:12px">
+        Come <span style="color:var(--pellet)">• puntos</span> y <span style="color:var(--power)">◉ poderes</span>. 
+        Con poder, los fantasmas se asustan: ¡tócalos para sumarlos!
+      </p>
+    </aside>
+  </div>
+
+  <script src="game.js"></script>
 </body>
 </html>
